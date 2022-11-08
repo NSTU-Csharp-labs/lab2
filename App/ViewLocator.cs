@@ -2,7 +2,8 @@ using System;
 using System.ComponentModel;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using App.ViewModels;
+using ReactiveUI;
+// using App.ViewModels;
 
 namespace App
 {
@@ -17,14 +18,14 @@ namespace App
             {
                 return (Control)Activator.CreateInstance(type)!;
             }
-            
+
             return new TextBlock { Text = "Not Found: " + name };
         }
 
         public bool Match(object data)
         {
 
-            return data is ViewModelBase;
+            return data is ReactiveObject;
         }
     }
 }

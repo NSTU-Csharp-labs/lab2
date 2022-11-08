@@ -1,8 +1,8 @@
 using ReactiveUI;
 
-namespace App.Controls.Welcome
+namespace App.Controls.WorkPlace
 {
-    public class WelcomeViewModel : ReactiveObject
+    public class WorkPlaceViewModel : ReactiveObject
     {
         public string Greeting => "Welcome to Avalonia!";
     }
