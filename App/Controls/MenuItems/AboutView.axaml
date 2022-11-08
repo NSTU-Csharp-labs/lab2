@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:App.Controls.MenuItems"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,4 +12,4 @@
 
     <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-</Window>
+</UserControl>
