@@ -1,4 +1,5 @@
 using Avalonia.ReactiveUI;
+using Avalonia;
 
 namespace App.Controls.MainWindow
 {

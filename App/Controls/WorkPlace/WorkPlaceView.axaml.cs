@@ -14,5 +14,6 @@ namespace App.Controls.WorkPlace
         {
             AvaloniaXamlLoader.Load(this);
         }
+
     }
 }

@@ -1,6 +1,6 @@
 using ReactiveUI;
 
-namespace App.Controls.WorkPlace.GenInfoWindow
+namespace App.Controls.WorkPlace.GenInfo
 {
     public class GenInfoViewModel : ReactiveObject
     {

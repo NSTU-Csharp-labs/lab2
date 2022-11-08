@@ -1,6 +1,6 @@
 using ReactiveUI;
 
-namespace App.Controls.WorkPlace.AdditionGenWindow
+namespace App.Controls.WorkPlace.AdditionGen
 {
     public class AdditionGenViewModel : ReactiveObject
     {

@@ -1,8 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using App.ViewModels;
-using App.Views;
+using App.Controls.MainWindow;
 
 namespace App
 {

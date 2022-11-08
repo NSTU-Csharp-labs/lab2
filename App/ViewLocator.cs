@@ -3,7 +3,6 @@ using System.ComponentModel;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using ReactiveUI;
-// using App.ViewModels;
 
 namespace App
 {
@@ -24,7 +23,6 @@ namespace App
 
         public bool Match(object data)
         {
-
             return data is ReactiveObject;
         }
     }

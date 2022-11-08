@@ -1,5 +1,6 @@
 using Avalonia.ReactiveUI;
 using Avalonia.Markup.Xaml;
+using Avalonia;
 
 namespace App.Controls.Welcome
 {
@@ -9,11 +10,10 @@ namespace App.Controls.Welcome
         {
             InitializeComponent();
         }
-using Avalonia.Markup.Xaml;
 
         public void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
+        {
+            AvaloniaXamlLoader.Load(this);
+        }
     }
-}
 }
