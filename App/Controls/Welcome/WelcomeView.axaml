@@ -8,8 +8,25 @@
         <welcome:WelcomeViewModel />
     </Design.DataContext>
     <!-- <TextBlock Text="asdasdasd" /> -->
-    <StackPanel HorizontalAlignment="Center"
-                Margin="50">
-        <TextBlock Text="{StaticResource WelcomeContent}" />
-    </StackPanel>
+    <Grid>
+        <StackPanel HorizontalAlignment="Left"
+                    Margin="30, 120, 0, 0"
+                    Width="400">
+            <TextBlock Text="{StaticResource WelcomeContent}" />
+            <TextBox Text="{Binding CompName, Mode = TwoWay}"
+                     Watermark="Введите имя генератора" />
+            <ComboBox Width="400"
+                      x:Name="behaviourComboBox">
+                <ComboBoxItem>ReturnAverageOfAvailableNumbers</ComboBoxItem>
+                <ComboBoxItem>ThrowException</ComboBoxItem>
+                <ComboBoxItem>ReturnNaN</ComboBoxItem>
+            </ComboBox>
+            <TextBox Text="{Binding N, Mode = TwoWay}"
+                     Watermark="Введите число N" />
+        </StackPanel>
+        <Button Command="{Binding CreateGen}"
+                HorizontalAlignment="Right"
+                Margin="0, 120, 100, 0"
+                Content="Создать генератор" />
+    </Grid>
 </UserControl>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uYT3gEsWPLnBjDqaZ23v+6zf1fVeFN8/4/SP73SNCUijeDs9MHhClIxQzbGp8ljpjuYzcH19tVqgoUKnaHCYvQ==",
+  "dgSpecHash": "IjvVgEGBNGpSeh1GzpunTENeeTZO+31o7j++efp0xtfRx5LyeQbNfKo79iDcTg0UTNdA3w+ZBVg11swekDeD0g==",
   "success": true,
-  "projectFilePath": "/home/danilka108/RiderProjects/lab2/Generators/Generators.csproj",
+  "projectFilePath": "C:\\Users\\s-hro\\source\\repos\\lab2\\Generators\\Generators.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
