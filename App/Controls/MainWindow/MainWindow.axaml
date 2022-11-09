@@ -1,17 +1,38 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:App.Controls.MainWindow"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vm="using:App.Controls.MainWindow"
+        xmlns:welcome="clr-namespace:App.Controls.Welcome"
+        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:locator="clr-namespace:App"
         x:Class="App.Controls.MainWindow.MainWindow"
-        Icon="../../Assets/avalonia-logo.ico"
-        Title="App">
-
+        Icon="../../Assets/generator-logo.ico"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        Title="NumGens">
+    <!--  -->
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Grid>
+        <rxui:RoutedViewHost PageTransition="{x:Null}"
+                             Router="{Binding Router}">
+            <rxui:RoutedViewHost.DefaultContent>
+                <welcome:WelcomeView DataContext="{Binding WelcomeViewModel}" />
+            </rxui:RoutedViewHost.DefaultContent>
+            <rxui:RoutedViewHost.ViewLocator>
+                <locator:RoutedViewLocator />
+            </rxui:RoutedViewHost.ViewLocator>
+        </rxui:RoutedViewHost>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Мануал по использованию"
+                      Command="{Binding GoToManual}"
+                      IsVisible="true" />
+            <MenuItem Header="О разработчиках"
+                      Command="{Binding GoToAbout}"
+                      IsVisible="true" />
+        </Menu>
+    </Grid>
 </Window>
