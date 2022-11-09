@@ -1,9 +1,19 @@
 using ReactiveUI;
-
+using System.Reactive;
+using App.Controls.Welcome;
 namespace App.Controls.MenuItems
 {
-    public class AboutViewModel : ReactiveObject
+    public class AboutViewModel : ReactiveObject, IRoutableViewModel
     {
-        public string Greeting => "Welcome to Avalonia!";
+        public string? UrlPathSegment { get; }
+        public IScreen HostScreen { get; }
+
+        public ReactiveCommand<Unit, Unit> GoBack { get; }
+        public AboutViewModel(IScreen hostScreen)
+        {
+            HostScreen = hostScreen;
+            GoBack = ReactiveCommand.CreateFromObservable
+                    (() => HostScreen.Router.NavigateBack.Execute(Unit.Default));
+        }
     }
 }

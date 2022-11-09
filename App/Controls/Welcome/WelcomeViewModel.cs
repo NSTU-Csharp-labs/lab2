@@ -2,14 +2,8 @@ using ReactiveUI;
 
 namespace App.Controls.Welcome
 {
-    public class WelcomeViewModel : ReactiveObject, IRoutableViewModel
+    public class WelcomeViewModel : ReactiveObject
     {
-        public string? UrlPathSegment { get; }
-        public IScreen HostScreen { get; }
-        public WelcomeViewModel(IScreen hostScreen)
-        {
-            HostScreen = hostScreen;
-        }
-
+        public WelcomeViewModel() { }
     }
 }

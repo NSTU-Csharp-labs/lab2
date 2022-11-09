@@ -16,23 +16,26 @@
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
-    <Grid>
+    <StackPanel>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Мануал по использованию"
+                      Command="{Binding GoToManual}" />
+            <MenuItem Header="О разработчиках"
+                      Command="{Binding GoToAbout}" />
+        </Menu>
+        <!--  -->
         <rxui:RoutedViewHost PageTransition="{x:Null}"
                              Router="{Binding Router}">
+            <!--  -->
             <rxui:RoutedViewHost.DefaultContent>
                 <welcome:WelcomeView DataContext="{Binding WelcomeViewModel}" />
             </rxui:RoutedViewHost.DefaultContent>
+            <!--  -->
             <rxui:RoutedViewHost.ViewLocator>
                 <locator:RoutedViewLocator />
             </rxui:RoutedViewHost.ViewLocator>
+            <!--  -->
         </rxui:RoutedViewHost>
-        <Menu VerticalAlignment="Top">
-            <MenuItem Header="Мануал по использованию"
-                      Command="{Binding GoToManual}"
-                      IsVisible="true" />
-            <MenuItem Header="О разработчиках"
-                      Command="{Binding GoToAbout}"
-                      IsVisible="true" />
-        </Menu>
-    </Grid>
+        <!--  -->
+    </StackPanel>
 </Window>

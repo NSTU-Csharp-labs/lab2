@@ -7,4 +7,9 @@
     <Design.DataContext>
         <welcome:WelcomeViewModel />
     </Design.DataContext>
+    <!-- <TextBlock Text="asdasdasd" /> -->
+    <StackPanel HorizontalAlignment="Center"
+                Margin="50">
+        <TextBlock Text="{StaticResource WelcomeContent}" />
+    </StackPanel>
 </UserControl>
