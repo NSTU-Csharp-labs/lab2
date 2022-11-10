@@ -7,6 +7,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Mixins;
 using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
+using ReactiveUI;
 
 
 namespace App.Controls.WorkPlace.GeneratorCard;
@@ -32,7 +33,7 @@ public partial class GeneratorCardView : ReactiveUserControl<GeneratorCardViewMo
     
     private static async Task DoShowInfo(InteractionContext<GenInfoViewModel, Unit> interactionContext)
     {
-        var dialog = new GenInfoWindow()
+        var dialog = new GenInfoWindow
         {
             DataContext = interactionContext.Input,
         };

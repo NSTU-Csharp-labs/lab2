@@ -10,6 +10,8 @@
     <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +20,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RESET_MODE" value="KEEP" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e48c385a0f8c4d27705158a41832ed686216b07b40ba171e89b41411bcc4dc/RxApp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -142,25 +145,6 @@
     <MESSAGE value="refactor opening addition gen dialog" />
     <MESSAGE value="refactor" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Generators/BaseGen.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/Generators/BaseGen.cs" initialLine="14" containingFunctionPresentation="constructor 'BaseGen'">
-            <startOffsets>
-              <option value="425" />
-            </startOffsets>
-            <endOffsets>
-              <option value="449" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -111,13 +111,7 @@
                 Margin="0,12" />
 
             <TextBlock FontSize="16" Text="Добавленные генераторы:" />
-            <ItemsControl Items="{Binding AvailableGenerators}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <generatorCard:GeneratorCardView DataContext="{Binding}" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <ItemsControl Items="{Binding AvailableGenerators}"/>
         </StackPanel>
     </Grid>
 </UserControl>
