@@ -1,28 +1,47 @@
 <Window
+    CanResize="False"
     Icon="../../../Assets/generator-logo.ico"
-    MaxHeight="300"
+    MaxHeight="350"
     MaxWidth="400"
-    MinHeight="300"
-    MinWidth="400"
     Title="NumGens - Addition Generator"
-    d:DesignHeight="300"
-    d:DesignWidth="300"
+    d:DesignHeight="350"
+    d:DesignWidth="400"
     mc:Ignorable="d"
     x:Class="App.Controls.WorkPlace.AdditionGen.AdditionGenWindow"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:locator="clr-namespace:App.Controls.WorkPlace.AdditionGen"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
     xmlns:vm="using:App.Controls.WorkPlace.AdditionGen"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.DataContext>
         <vm:AdditionGenViewModel />
     </Design.DataContext>
+    <Grid>
+        <rxui:RoutedViewHost PageTransition="{x:Null}" Router="{Binding Router}">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock>Какой генератор добавляем?</TextBlock>
-        <Button Command="{Binding NavigateToAddConstStepGen}" Content="Генератор с постоянным шагом" />
-        <Button Command="{Binding NavigateToAddRandomGen}" Content="Генератор случайных чисел" />
-    </StackPanel>
+            <rxui:RoutedViewHost.DefaultContent>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Какой генератор добавляем?" />
+                    <Button
+                        Command="{Binding NavigateToAddConstStepGen}"
+                        Content="Генератор с постоянным шагом"
+                        Margin="3"
+                        Width="325" />
+                    <Button
+                        Command="{Binding NavigateToAddRandomGen}"
+                        Content="Генератор случайных чисел"
+                        Margin="3"
+                        Width="325" />
+                </StackPanel>
+            </rxui:RoutedViewHost.DefaultContent>
 
+            <rxui:RoutedViewHost.ViewLocator>
+                <locator:RoutedAddGenViewLocator />
+            </rxui:RoutedViewHost.ViewLocator>
+
+        </rxui:RoutedViewHost>
+    </Grid>
 </Window>

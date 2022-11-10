@@ -1,0 +1,54 @@
+<UserControl
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.AdditionGen.AddConstStepGen.AddConstStepGenView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.WorkPlace.AdditionGen.AddConstStepGen"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.DataContext>
+        <vm:AddConstStepGenViewModel />
+    </Design.DataContext>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Margin="0,10,0,0">
+            <TextBlock Text="Создание генератора с постоянным шагом" />
+            <TextBox Text="{Binding GenName, Mode=TwoWay}" Watermark="Введите имя генератора" />
+            <ComboBox
+                Margin="5"
+                SelectedIndex="{Binding SelectedAverageBehaviorIndex}"
+                Width="325"
+                x:Name="BehaviourComboBox">
+                <ComboBoxItem>ReturnAverageOfAvailableNumbers</ComboBoxItem>
+                <ComboBoxItem>ThrowException</ComboBoxItem>
+                <ComboBoxItem>ReturnNaN</ComboBoxItem>
+            </ComboBox>
+            <TextBox
+                Margin="3"
+                Text="{Binding N, Mode=TwoWay}"
+                Watermark="Введите число N"
+                Width="325" />
+            <TextBox
+                Margin="3"
+                Text="{Binding StartPosition, Mode=TwoWay}"
+                Watermark="Введите стартовую позицию&#x0a;генерации чисел"
+                Width="325" />
+            <TextBox
+                Margin="3"
+                Text="{Binding Step, Mode=TwoWay}"
+                Watermark="Введите шаг генератора"
+                Width="325" />
+            <Button
+                Command="{Binding CreateConstStepGen}"
+                Content="Создать генератор&#x0a;с постоянным шагом"
+                Margin="3"
+                Width="325" />
+            <TextBlock
+                Foreground="Red"
+                IsVisible="{Binding IsDataInvalid}"
+                Margin="3"
+                Text="Не удалось создать генератор, данные введены некорректно" />
+        </StackPanel>
+    </Grid>
+
+</UserControl>

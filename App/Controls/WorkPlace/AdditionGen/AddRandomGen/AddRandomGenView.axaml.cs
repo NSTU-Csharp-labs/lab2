@@ -1,12 +1,13 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
 
-namespace App.Controls.WorkPlace.AdditionGen.AddConstStepGen;
+namespace App.Controls.WorkPlace.AdditionGen.AddRandomGen;
 
-public partial class AddConstStepGen : UserControl
+public partial class AddRandomGenView :  ReactiveUserControl<AddRandomGenViewModel>
 {
-    public AddConstStepGen()
+    public AddRandomGenView()
     {
         InitializeComponent();
     }
@@ -15,4 +16,5 @@ public partial class AddConstStepGen : UserControl
     {
         AvaloniaXamlLoader.Load(this);
     }
+    
 }
