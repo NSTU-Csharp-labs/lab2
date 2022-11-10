@@ -27,7 +27,6 @@ namespace App.Controls.Welcome
             GoToManual = ReactiveCommand.CreateFromObservable(
                 () => HostScreen.Router.Navigate.Execute(new ManualViewModel(HostScreen))
             );
-
         }
 
         public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }

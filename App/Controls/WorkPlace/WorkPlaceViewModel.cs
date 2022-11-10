@@ -67,6 +67,7 @@ namespace App.Controls.WorkPlace
             {
                 var newGen = await ShowAdditionGen.Handle(new AdditionGenViewModel());
                 if (newGen != null) CompositionGen.PushGen(newGen);
+                AvailableGenerators = CompositionGen.Select(gen => new GeneratorCardViewModel(gen));
             }
             catch (Exception e)
             {

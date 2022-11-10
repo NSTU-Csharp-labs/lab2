@@ -19,7 +19,7 @@ public class AddRandomGenViewModel: ReactiveObject, IRoutableViewModel
         {
                 try
                 {
-                        return new RandomGen(GenName, Int32.Parse(N), Behavior);
+                        return new RandomGen(GenName, Int32.Parse(N), Behavior) as BaseGen;
                 }
                 catch (Exception)
                 {
@@ -34,7 +34,7 @@ public class AddRandomGenViewModel: ReactiveObject, IRoutableViewModel
     
     public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
 
-    public ReactiveCommand<Unit,RandomGen?> CreateRandomGen{get;}
+    public ReactiveCommand<Unit,BaseGen?> CreateRandomGen{get;}
 
     public string? UrlPathSegment { get; } = "/WorkPlace/AdditionGen/AdditionRandomGen";
     public IScreen HostScreen { get; }

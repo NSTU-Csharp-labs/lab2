@@ -25,7 +25,7 @@ namespace App.Controls.WorkPlace.AdditionGen
             NavigateToAddConstStepGen = ReactiveCommand.CreateFromObservable(
                 () => Router.Navigate.Execute(AddConstStepGenViewModel));
             NavigateToAddRandomGen = ReactiveCommand.CreateFromObservable(
-                () => Router.Navigate.Execute(new AddRandomGenViewModel(this)));
+                () => Router.Navigate.Execute(AddRandomGenViewModel));
         }
 
     }

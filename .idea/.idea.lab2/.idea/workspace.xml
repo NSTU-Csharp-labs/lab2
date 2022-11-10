@@ -7,19 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="Add opening addition gen dialog">
+    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="refactor opening addition gen dialog">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGenViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGenViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenView.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenWindow.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +30,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e48c385a0f8c4d27705158a41832ed686216b07b40ba171e89b41411bcc4dc/RxApp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGenViewModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,7 +90,7 @@
       <updated>1668071297103</updated>
       <workItem from="1668071307993" duration="4987000" />
       <workItem from="1668078536006" duration="7009000" />
-      <workItem from="1668095887847" duration="12757000" />
+      <workItem from="1668095887847" duration="18452000" />
     </task>
     <task id="LOCAL-00001" summary="update routing, update workplace">
       <created>1668080479026</created>
@@ -115,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668084946492</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor opening addition gen dialog">
+      <created>1668109833131</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668109833131</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +143,8 @@
     <MESSAGE value="update routing, update workplace" />
     <MESSAGE value="Update workplace view" />
     <MESSAGE value="Add opening addition gen dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add opening addition gen dialog" />
+    <MESSAGE value="refactor opening addition gen dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor opening addition gen dialog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

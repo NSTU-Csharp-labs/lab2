@@ -11,9 +11,9 @@
     </Application.Styles>
     <Application.Resources>
         <ResourceDictionary>
-            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического</system:String>
-            <system:String x:Key="GeneratorNamePropertyDescription">Имя</system:String>
-            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел</system:String>
+            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического: </system:String>
+            <system:String x:Key="GeneratorNamePropertyDescription">Имя: </system:String>
+            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел: </system:String>
             
             <system:String x:Key="AboutContent">Здесь текст какие мы крутые</system:String>
             
