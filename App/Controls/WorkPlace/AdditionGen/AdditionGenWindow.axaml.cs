@@ -17,14 +17,8 @@ namespace App.Controls.WorkPlace.AdditionGen
         {
             this.WhenActivated(d =>
             {
-                ViewModel!.AddRandomGenViewModel.CreateRandomGen.Subscribe((g) =>
-                {
-                    if (g != null) Close(g);
-                }).DisposeWith(d);
-                ViewModel!.AddConstStepGenViewModel.CreateConstStepGen.Subscribe((g) =>
-                {
-                    if (g != null) Close(g);
-                }).DisposeWith(d);
+                ViewModel!.AddRandomGenViewModel.CreateRandomGen.Subscribe(Close).DisposeWith(d);
+                ViewModel!.AddConstStepGenViewModel.CreateConstStepGen.Subscribe(Close).DisposeWith(d);
             });
             InitializeComponent();
         }
