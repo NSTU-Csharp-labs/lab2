@@ -7,11 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="update routing, update workplace">
+    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="Update workplace view">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +19,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RESET_MODE" value="HARD" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e48c385a0f8c4d27705158a41832ed686216b07b40ba171e89b41411bcc4dc/RxApp.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/MainWindow/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/MenuItems/AboutViewModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -79,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668071297103</updated>
       <workItem from="1668071307993" duration="4987000" />
-      <workItem from="1668078536006" duration="5177000" />
+      <workItem from="1668078536006" duration="6334000" />
     </task>
     <task id="LOCAL-00001" summary="update routing, update workplace">
       <created>1668080479026</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668080479026</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update workplace view">
+      <created>1668083884299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668083884299</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +117,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update routing, update workplace" />
-    <option name="LAST_COMMIT_MESSAGE" value="update routing, update workplace" />
+    <MESSAGE value="Update workplace view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workplace view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

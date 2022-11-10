@@ -17,6 +17,7 @@
             <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.Name, StringFormat=Имя: {0}}"/>
             <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.N, StringFormat=Количество чисел\, необходимое для подсчета среднего арифметического: {0}}"/>
             <TextBlock Margin="0" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour, StringFormat=Поведение подсчета среднего арифметичесого при недостатке числел: {0}}"/>
+            <Button Content="Добавить генератор" Command="{Binding AddGenerator}"/>
         </StackPanel>
         
         <StackPanel Grid.Column="1">
