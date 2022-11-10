@@ -1,63 +1,116 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:App.Controls.WorkPlace"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:generatorCard="clr-namespace:App.Controls.WorkPlace.GeneratorCard"
-             d:DesignHeight="450"
-             d:DesignWidth="800"
-             mc:Ignorable="d"
-             x:Class="App.Controls.WorkPlace.WorkPlaceView">
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.WorkPlaceView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:generatorCard="clr-namespace:App.Controls.WorkPlace.GeneratorCard"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.WorkPlace"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.DataContext>
         <vm:WorkPlaceViewModel />
     </Design.DataContext>
 
-    <Grid VerticalAlignment="Stretch" ColumnDefinitions="*, 3*">
-        <Grid Grid.Column="0" VerticalAlignment="Stretch" Margin="20" RowDefinitions="Auto, *, Auto">
+    <Grid ColumnDefinitions="*, 3*" VerticalAlignment="Stretch">
+        <Grid
+            Grid.Column="0"
+            Margin="20"
+            RowDefinitions="Auto, *, Auto"
+            VerticalAlignment="Stretch">
             <StackPanel>
-                <TextBlock Margin="0 0 0 12" FontSize="24" LineHeight="32" TextWrapping="WrapWithOverflow"
-                           FontWeight="Bold" Text="Информация о композитном генераторе" />
+                <TextBlock
+                    FontSize="24"
+                    FontWeight="Bold"
+                    LineHeight="32"
+                    Margin="0,0,0,12"
+                    Text="Информация о композитном генераторе"
+                    TextWrapping="WrapWithOverflow" />
 
-                <WrapPanel Margin="0 0 0 8" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{StaticResource GeneratorNamePropertyDescription}" />
-                    <TextBlock FontSize="18" LineHeight="24" FontWeight="Bold"
-                               TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.Name}" />
+                <WrapPanel
+                    Margin="0,0,0,8"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNamePropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Text="{Binding CompositionGen.Name}"
+                        TextWrapping="WrapWithOverflow" />
                 </WrapPanel>
 
-                <WrapPanel Margin="0 0 0 12" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
-                               Text="{StaticResource GeneratorNPropertyDescription}" />
-                    <TextBlock FontSize="18" LineHeight="24" FontWeight="Bold"
-                               TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.N}" />
+                <WrapPanel
+                    Margin="0,0,0,12"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Text="{Binding CompositionGen.N}"
+                        TextWrapping="WrapWithOverflow" />
                 </WrapPanel>
 
-                <WrapPanel Margin="0 0 0 12" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
-                               Text="{StaticResource GeneratorAverageBehaviorPropertyDescription}" />
-                    <TextBlock Margin="0 0 0 0" FontSize="18" LineHeight="24" FontWeight="Bold"
-                               TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour}" />
+                <WrapPanel
+                    Margin="0,0,0,12"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorAverageBehaviorPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Margin="0,0,0,0"
+                        Text="{Binding UsedAverageBehaviour}"
+                        TextWrapping="WrapWithOverflow" />
                 </WrapPanel>
             </StackPanel>
 
-            <StackPanel Margin="0 20" Orientation="Vertical" Grid.Row="2">
-                <Button
-                    Content="Сгенерировать следующее число"
-                    Command="{Binding GenerateNextNumber}" />
-                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Margin="0 0 0 12"
-                           Text="{Binding LastGeneratedNumber, StringFormat=Последнее сгенерированное число: {0}}" />
-                <Button
-                    Content="Подсчитать следнее"
-                    Command="{Binding CalculateAverage}" />
-                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Margin="0 0 0 4"
-                           Text="{Binding LastCalculatedAverage, StringFormat=Последнее подсчитаное среднее арифметическое: {0}}" />
+            <StackPanel
+                Grid.Row="2"
+                Margin="0,20"
+                Orientation="Vertical">
+                <Button Command="{Binding GenerateNextNumber}" Content="Сгенерировать следующее число" />
+                <TextBlock
+                    FontSize="18"
+                    LineHeight="24"
+                    Margin="0,0,0,12"
+                    Text="{Binding LastGeneratedNumber, StringFormat=Последнее сгенерированное число: {0}}"
+                    TextWrapping="WrapWithOverflow" />
+                <Button Command="{Binding CalculateAverage}" Content="Подсчитать следнее" />
+                <TextBlock
+                    FontSize="18"
+                    LineHeight="24"
+                    Margin="0,0,0,4"
+                    Text="{Binding LastCalculatedAverage, StringFormat=Последнее подсчитаное среднее арифметическое: {0}}"
+                    TextWrapping="WrapWithOverflow" />
             </StackPanel>
         </Grid>
 
-        <StackPanel HorizontalAlignment="Center" Grid.Column="1">
-            <Button Margin="0 12"  Content="Добавить генератор" Command="{Binding AddGenerator}" />
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+            <Button
+                Command="{Binding AddGenerator}"
+                Content="Добавить генератор"
+                FontSize="18"
+                Margin="0,12" />
 
-            <TextBlock Text="Добавленные генератора" />
+            <TextBlock FontSize="16" Text="Добавленные генераторы:" />
             <ItemsControl Items="{Binding AvailableGenerators}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>

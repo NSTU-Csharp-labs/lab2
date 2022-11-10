@@ -1,15 +1,38 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:App.Controls.WorkPlace.GenInfo"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="App.Controls.WorkPlace.GenInfo.GenInfoWindow">
+<Window
+    MinHeight="400"
+    MinWidth="800"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.GenInfo.GenInfoWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.WorkPlace.GenInfo"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.DataContext>
-        <vm:GenInfoViewModel/>
+        <vm:GenInfoViewModel />
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,20"
+            Orientation="Vertical">
+            <Button Command="{Binding GenerateNextNumber}" Content="Сгенерировать следующее число" />
+            <TextBlock
+                FontSize="18"
+                LineHeight="24"
+                Margin="0,0,0,12"
+                Text="{Binding LastGeneratedNumber, StringFormat=Последнее сгенерированное число: {0}}"
+                TextWrapping="WrapWithOverflow" />
+            <Button Command="{Binding CalculateAverage}" Content="Подсчитать следнее" />
+            <TextBlock
+                FontSize="18"
+                LineHeight="24"
+                Margin="0,0,0,4"
+                Text="{Binding LastCalculatedAverage, StringFormat=Последнее подсчитаное среднее арифметическое: {0}}"
+                TextWrapping="WrapWithOverflow" />
+        </StackPanel>
+    </StackPanel>
 </Window>

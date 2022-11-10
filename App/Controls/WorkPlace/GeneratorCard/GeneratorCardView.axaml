@@ -1,15 +1,26 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:generatorCard="clr-namespace:App.Controls.WorkPlace.GeneratorCard"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="App.Controls.WorkPlace.GeneratorCard.GeneratorCardView">
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.GeneratorCard.GeneratorCardView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:generatorCard="clr-namespace:App.Controls.WorkPlace.GeneratorCard"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.DataContext>
-        <generatorCard:GeneratorCardViewModel/>
+        <generatorCard:GeneratorCardViewModel />
     </Design.DataContext>
-    
-    <Button Command="{Binding}">
-        <TextBlock FontSize="18" LineHeight="24" Text="{Binding Generator.Name}"/>
-    </Button>
+
+    <Button
+        Command="{Binding Info}"
+        Content="{Binding Generator.Name}"
+        FontSize="18"
+        HorizontalAlignment="Stretch"
+        Margin="0,5,0,0" />
+
+    <!--  <TextBlock  -->
+    <!--  FontSize="18"  -->
+    <!--  LineHeight="24"  -->
+    <!--  Text="{Binding Generator.Name}" />  -->
 </UserControl>

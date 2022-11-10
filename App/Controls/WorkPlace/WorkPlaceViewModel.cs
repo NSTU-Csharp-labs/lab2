@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Reactive;
@@ -46,14 +47,17 @@ namespace App.Controls.WorkPlace
             HostScreen = hostScreen;
             CompositionGen = CompositionGenManager.Get();
 
-            AvailableGenerators = CompositionGen.Select(gen => new GeneratorCardViewModel(gen));
+            AvailableGenerators = new ObservableCollection<GeneratorCardViewModel>(
+                CompositionGen.Select(gen => new GeneratorCardViewModel(gen))
+                );
             
             ShowAdditionGen = new Interaction<AdditionGenViewModel, BaseGen?>();
             ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
 
             CalculateAverage = ReactiveCommand.CreateFromTask(OnCalculateAverage);
-            AddGenerator = ReactiveCommand.CreateFromTask(OnAddGenerator);
             GenerateNextNumber = ReactiveCommand.CreateFromTask(OnGenerateNextNumber);
+
+            AddGenerator = ReactiveCommand.CreateFromTask(OnAddGenerator);
             
             ShowGeneratorInfo = ReactiveCommand.CreateFromTask(async (string a) =>
             {
@@ -66,8 +70,11 @@ namespace App.Controls.WorkPlace
             try
             {
                 var newGen = await ShowAdditionGen.Handle(new AdditionGenViewModel());
-                if (newGen != null) CompositionGen.PushGen(newGen);
-                AvailableGenerators = CompositionGen.Select(gen => new GeneratorCardViewModel(gen));
+                if (newGen != null)
+                {
+                    CompositionGen.PushGen(newGen);
+                    AvailableGenerators.Add(new GeneratorCardViewModel(newGen));
+                }
             }
             catch (Exception e)
             {
@@ -118,12 +125,7 @@ namespace App.Controls.WorkPlace
         public string? UrlPathSegment { get; } = "/WorkPlace";
         public IScreen HostScreen { get; }
         
-        private IEnumerable<GeneratorCardViewModel> _availableGenerators;
 
-        public IEnumerable<GeneratorCardViewModel> AvailableGenerators
-        {
-            get => _availableGenerators;
-            set => this.RaiseAndSetIfChanged(ref _availableGenerators, value);
-        }
+        public ObservableCollection<GeneratorCardViewModel> AvailableGenerators { get; }
     }
 }
