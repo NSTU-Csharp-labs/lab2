@@ -9,9 +9,6 @@ namespace App.Controls.WorkPlace.AdditionGen
         public AdditionGenWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
         }
 
         public void InitializeComponent()

@@ -1,15 +1,28 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:App.Controls.WorkPlace.AdditionGen"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="App.Controls.WorkPlace.AdditionGen.AdditionGenWindow">
+<Window
+    Icon="../../../Assets/generator-logo.ico"
+    MaxHeight="300"
+    MaxWidth="400"
+    MinHeight="300"
+    MinWidth="400"
+    Title="NumGens - Addition Generator"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.AdditionGen.AdditionGenWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.WorkPlace.AdditionGen"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.DataContext>
-        <vm:AdditionGenViewModel/>
+        <vm:AdditionGenViewModel />
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock>Какой генератор добавляем?</TextBlock>
+        <Button Command="{Binding NavigateToAddConstStepGen}" Content="Генератор с постоянным шагом" />
+        <Button Command="{Binding NavigateToAddRandomGen}" Content="Генератор случайных чисел" />
+    </StackPanel>
 
 </Window>
