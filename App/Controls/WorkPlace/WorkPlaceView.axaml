@@ -34,7 +34,7 @@
                            TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour}" />
             </StackPanel>
 
-            <!-- <Button DockPanel.Dock="Bottom" Content="Добавить генератор" Command="{Binding AddGenerator}" /> -->
+            <Button DockPanel.Dock="Bottom" Content="Добавить генератор" Command="{Binding AddGenerator}" />
 
             <StackPanel DockPanel.Dock="Bottom">
 

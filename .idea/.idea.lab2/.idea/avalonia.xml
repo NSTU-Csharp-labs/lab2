@@ -12,6 +12,7 @@
         <entry key="App/Controls/Welcome/WelcomeView.axaml" value="App/App.csproj" />
         <entry key="App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGen.axaml" value="App/App.csproj" />
         <entry key="App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGen.axaml" value="App/App.csproj" />
+        <entry key="App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenView.axaml" value="App/App.csproj" />
         <entry key="App/Controls/WorkPlace/AdditionGen/AdditionGenWindow.axaml" value="App/App.csproj" />
         <entry key="App/Controls/WorkPlace/GenInfo/GenInfoWindow.axaml" value="App/App.csproj" />
         <entry key="App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml" value="App/App.csproj" />

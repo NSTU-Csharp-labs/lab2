@@ -48,7 +48,7 @@ namespace App.Controls.WorkPlace
 
             AvailableGenerators = CompositionGen.Select(gen => new GeneratorCardViewModel(gen));
             
-            ShowAdditionGen = new Interaction<AdditionGenViewModel, Unit>();
+            ShowAdditionGen = new Interaction<AdditionGenViewModel, BaseGen?>();
             ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
 
             CalculateAverage = ReactiveCommand.CreateFromTask(OnCalculateAverage);
@@ -59,12 +59,19 @@ namespace App.Controls.WorkPlace
             {
                 
             });
-
         }
 
         private async Task OnAddGenerator()
         {
-            await ShowAdditionGen.Handle(new AdditionGenViewModel());
+            try
+            {
+                var newGen = await ShowAdditionGen.Handle(new AdditionGenViewModel());
+                if (newGen != null) CompositionGen.PushGen(newGen);
+            }
+            catch (Exception e)
+            {
+                await ShowErrorMessage.Handle(new ErrorMessageViewModel(e.Message));
+            }
         }
 
         private async Task OnCalculateAverage()
@@ -96,7 +103,7 @@ namespace App.Controls.WorkPlace
             }
         }
 
-        public Interaction<AdditionGenViewModel, Unit> ShowAdditionGen { get; }
+        public Interaction<AdditionGenViewModel, BaseGen?> ShowAdditionGen { get; }
         
         public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
 

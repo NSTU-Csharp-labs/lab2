@@ -8,18 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="Add opening addition gen dialog">
-      <change afterPath="$PROJECT_DIR$/App/Controls/ErrorMessage/ErrorMessageViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controls/ErrorMessage/ErrorMessageWindow.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controls/ErrorMessage/ErrorMessageWindow.axaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGenViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddConstStepGen/AddConstStepGenViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AddRandomGen/AddRandomGenView.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/AdditionGen/AdditionGenWindow.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/BaseGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/BaseGen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/CompositionGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/CompositionGen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,10 @@
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +92,7 @@
       <updated>1668071297103</updated>
       <workItem from="1668071307993" duration="4987000" />
       <workItem from="1668078536006" duration="7009000" />
-      <workItem from="1668095887847" duration="7742000" />
+      <workItem from="1668095887847" duration="12757000" />
     </task>
     <task id="LOCAL-00001" summary="update routing, update workplace">
       <created>1668080479026</created>

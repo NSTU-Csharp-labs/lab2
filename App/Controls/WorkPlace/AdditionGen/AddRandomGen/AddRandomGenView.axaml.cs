@@ -1,7 +1,10 @@
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
+using ReactiveUI;
+using Tmds.DBus;
 
 namespace App.Controls.WorkPlace.AdditionGen.AddRandomGen;
 

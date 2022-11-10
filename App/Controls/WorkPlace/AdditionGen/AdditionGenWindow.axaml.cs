@@ -1,8 +1,8 @@
-using Avalonia.ReactiveUI;
 using System;
-using System.Reactive.Disposables;
+using Avalonia.ReactiveUI;
 using Avalonia.Markup.Xaml;
 using Avalonia;
+using Avalonia.Controls.Mixins;
 using ReactiveUI;
 
 namespace App.Controls.WorkPlace.AdditionGen
@@ -23,6 +23,5 @@ namespace App.Controls.WorkPlace.AdditionGen
         {
             AvaloniaXamlLoader.Load(this);
         }
-
     }
 }

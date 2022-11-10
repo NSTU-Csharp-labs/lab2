@@ -16,10 +16,9 @@ public class AddConstStepGenViewModel: ReactiveObject, IRoutableViewModel
                         new ConstStepGen(GenName, Int32.Parse(N), Behavior, 
                                 Int32.Parse(Step), Int32.Parse(StartPosition))
                 );
-
         }
 
-        public ReactiveCommand<Unit,ConstStepGen> CreateConstStepGen{get;}
+        public ReactiveCommand<Unit,ConstStepGen> CreateConstStepGen { get; }
 
         public string? UrlPathSegment { get; } = "/WorkPlace/AdditionGen/AdditionConstStepGen";
         public IScreen HostScreen { get; }

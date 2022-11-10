@@ -8,6 +8,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Mixins;
 using Avalonia.ReactiveUI;
 using Avalonia.Markup.Xaml;
+using Generators;
 using ReactiveUI;
 
 namespace App.Controls.WorkPlace
@@ -45,14 +46,12 @@ namespace App.Controls.WorkPlace
             };
             
             if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-            {
-                await dialog.ShowDialog(desktop.MainWindow);
-            }
+                await dialog.ShowDialog(desktop.MainWindow); 
             
             interactionContext.SetOutput(Unit.Default);
         }
 
-        private static async Task DoShowAdditionGen(InteractionContext<AdditionGenViewModel, Unit> interactionContext)
+        private static async Task DoShowAdditionGen(InteractionContext<AdditionGenViewModel, BaseGen?> interactionContext)
         {
             var dialog = new AdditionGenWindow
             {
@@ -61,10 +60,13 @@ namespace App.Controls.WorkPlace
             
             if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                await dialog.ShowDialog(desktop.MainWindow);
+                var newGen = await dialog.ShowDialog<BaseGen?>(desktop.MainWindow);
+                interactionContext.SetOutput(newGen);
             }
-            
-            interactionContext.SetOutput(Unit.Default);
+            else
+            {
+                interactionContext.SetOutput(null); 
+            }
         }
     }
 }
