@@ -1,9 +1,11 @@
 using System;
 using System.Reactive;
+using System.Reactive.Linq;
 using System.Security.Principal;
 using Avalonia.Controls.Templates;
 using ReactiveUI;
 using Generators;
+using App.Controls.ErrorMessage;
 
 
 namespace App.Controls.WorkPlace.AdditionGen.AddConstStepGen;
@@ -12,13 +14,27 @@ public class AddConstStepGenViewModel: ReactiveObject, IRoutableViewModel
         public AddConstStepGenViewModel(IScreen hostScreen)
         {
                 HostScreen = hostScreen;
-                CreateConstStepGen = ReactiveCommand.Create(() => 
-                        new ConstStepGen(GenName, Int32.Parse(N), Behavior, 
-                                Int32.Parse(Step), Int32.Parse(StartPosition))
-                );
+                ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
+                
+                CreateConstStepGen = ReactiveCommand.CreateFromTask(async () =>
+                {
+                        try
+                        {
+                                return new ConstStepGen(GenName, Int32.Parse(N), Behavior,
+                                        Int32.Parse(Step), Int32.Parse(StartPosition));
+                        }
+                        catch (Exception)
+                        {
+                                await ShowErrorMessage.Handle(
+                                        new ErrorMessageViewModel("Присутсвует ошибка в введенных данных.")
+                                        );
+                        }
+                        return null;
+                });
         }
+        public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
 
-        public ReactiveCommand<Unit,ConstStepGen> CreateConstStepGen { get; }
+        public ReactiveCommand<Unit,ConstStepGen?> CreateConstStepGen { get; } 
 
         public string? UrlPathSegment { get; } = "/WorkPlace/AdditionGen/AdditionConstStepGen";
         public IScreen HostScreen { get; }

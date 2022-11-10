@@ -43,11 +43,6 @@
                 Content="Создать генератор&#x0a;с постоянным шагом"
                 Margin="3"
                 Width="325" />
-            <TextBlock
-                Foreground="Red"
-                IsVisible="{Binding IsDataInvalid}"
-                Margin="3"
-                Text="Не удалось создать генератор, данные введены некорректно" />
         </StackPanel>
     </Grid>
 

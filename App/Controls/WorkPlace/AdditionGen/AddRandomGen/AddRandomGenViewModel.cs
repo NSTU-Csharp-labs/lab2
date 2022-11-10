@@ -1,5 +1,7 @@
 using System;
 using System.Reactive;
+using System.Reactive.Linq;
+using App.Controls.ErrorMessage;
 using ReactiveUI;
 using Generators;
 
@@ -11,12 +13,28 @@ public class AddRandomGenViewModel: ReactiveObject, IRoutableViewModel
     public AddRandomGenViewModel(IScreen hostScreen)
     {
         HostScreen = hostScreen;
-        CreateRandomGen = ReactiveCommand.Create(() =>
-                new RandomGen(GenName, Int32.Parse(N), Behavior)
-        );
+        ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
+        
+        CreateRandomGen = ReactiveCommand.CreateFromTask(async () =>
+        {
+                try
+                {
+                        return new RandomGen(GenName, Int32.Parse(N), Behavior);
+                }
+                catch (Exception)
+                {
+                        await ShowErrorMessage.Handle(
+                                new ErrorMessageViewModel("Присутсвует ошибка в введенных данных.")
+                        );
+                }
+                return null;
+        });
         
     }
-    public ReactiveCommand<Unit,RandomGen> CreateRandomGen{get;}
+    
+    public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
+
+    public ReactiveCommand<Unit,RandomGen?> CreateRandomGen{get;}
 
     public string? UrlPathSegment { get; } = "/WorkPlace/AdditionGen/AdditionRandomGen";
     public IScreen HostScreen { get; }

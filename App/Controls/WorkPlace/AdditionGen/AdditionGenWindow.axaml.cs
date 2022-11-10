@@ -1,7 +1,11 @@
 using System;
+using System.Reactive;
+using System.Threading.Tasks;
+using App.Controls.ErrorMessage;
 using Avalonia.ReactiveUI;
 using Avalonia.Markup.Xaml;
 using Avalonia;
+using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Mixins;
 using ReactiveUI;
 
@@ -13,8 +17,8 @@ namespace App.Controls.WorkPlace.AdditionGen
         {
             this.WhenActivated(d =>
             {
-                ViewModel!.AddRandomGenViewModel.CreateRandomGen.Subscribe(Close).DisposeWith(d);
-                ViewModel!.AddConstStepGenViewModel.CreateConstStepGen.Subscribe(Close).DisposeWith(d);
+                ViewModel!.AddRandomGenViewModel.CreateRandomGen.Subscribe((g) => Close(g)).DisposeWith(d);
+                ViewModel!.AddConstStepGenViewModel.CreateConstStepGen.Subscribe((g) => Close(g)).DisposeWith(d);
             });
             InitializeComponent();
         }
@@ -23,5 +27,7 @@ namespace App.Controls.WorkPlace.AdditionGen
         {
             AvaloniaXamlLoader.Load(this);
         }
+        
+        
     }
 }
