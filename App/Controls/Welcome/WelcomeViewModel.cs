@@ -6,8 +6,34 @@ using System;
 
 namespace App.Controls.Welcome
 {
-    public class WelcomeViewModel : ReactiveObject
+    public class WelcomeViewModel : ReactiveObject, IRoutableViewModel
+
     {
+
+        public WelcomeViewModel(IScreen hostScreen)
+        {
+            HostScreen = hostScreen;
+            IsDataInvalid = false;
+        }
+
+        public void CreateGen()
+        {
+            try
+            {
+                ProgramGen = new CompositionGen(CompName, Convert.ToInt32(N), AverageBehavior.ReturnAverageOfAvailableNumbers);
+                IsDataInvalid = false;
+            }
+            catch (Exception)
+            {
+                IsDataInvalid = true;
+            }
+        }
+        public bool IsDataInvalid
+        {
+            get => _isDataInvalid;
+            set => this.RaiseAndSetIfChanged(ref _isDataInvalid, value);
+        }
+
         public string CompName
         {
             get => _compName;
@@ -23,18 +49,18 @@ namespace App.Controls.Welcome
             get => _n;
             set
             {
-                Console.WriteLine("ok!");
                 this.RaiseAndSetIfChanged(ref _n, value);
             }
         }
+
+        //
+        private CompositionGen ProgramGen;
         private string _compName;
         private AverageBehavior _behavior;
         private string _n;
-        public WelcomeViewModel()
-        {
-            // var fontComboBox = this.Find<ComboBox>("fontComboBox");
-        }
+        private bool _isDataInvalid = false;
 
-        public void CreateGen() { }
+        public string? UrlPathSegment { get; }
+        public IScreen HostScreen { get; }
     }
 }

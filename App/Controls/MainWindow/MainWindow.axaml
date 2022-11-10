@@ -1,41 +1,42 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="using:App.Controls.MainWindow"
-        xmlns:welcome="clr-namespace:App.Controls.Welcome"
-        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
-        xmlns:locator="clr-namespace:App"
-        x:Class="App.Controls.MainWindow.MainWindow"
-        Icon="../../Assets/generator-logo.ico"
-        mc:Ignorable="d"
-        d:DesignWidth="800"
-        d:DesignHeight="450"
-        Title="NumGens">
-    <!--  -->
+<Window
+    Icon="../../Assets/generator-logo.ico"
+    Title="NumGens"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.MainWindow.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:locator="clr-namespace:App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+    xmlns:vm="using:App.Controls.MainWindow"
+    xmlns:welcome="clr-namespace:App.Controls.Welcome"
+    xmlns:workplace="clr-namespace:App.Controls.WorkPlace"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--    -->
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
     <StackPanel>
         <Menu VerticalAlignment="Top">
-            <MenuItem Header="Мануал по использованию"
-                      Command="{Binding GoToManual}" />
-            <MenuItem Header="О разработчиках"
-                      Command="{Binding GoToAbout}" />
+            <MenuItem Command="{Binding GoToManual}" Header="Мануал по использованию" />
+            <MenuItem Command="{Binding GoToAbout}" Header="О разработчиках" />
         </Menu>
-        <!--  -->
-        <rxui:RoutedViewHost PageTransition="{x:Null}"
-                             Router="{Binding Router}">
-            <!--  -->
+        <!--    -->
+        <rxui:RoutedViewHost PageTransition="{x:Null}" Router="{Binding Router}">
             <rxui:RoutedViewHost.DefaultContent>
                 <welcome:WelcomeView DataContext="{Binding WelcomeViewModel}" />
             </rxui:RoutedViewHost.DefaultContent>
-            <!--  -->
+            <!-- <rxui:RoutedViewHost.DefaultContent> -->
+            <!--     <workplace:WorkPlaceView DataContext="{Binding WorkPlaceViewModel}" /> -->
+            <!-- </rxui:RoutedViewHost.DefaultContent> -->
+            <!--    -->
             <rxui:RoutedViewHost.ViewLocator>
                 <locator:RoutedViewLocator />
             </rxui:RoutedViewHost.ViewLocator>
-            <!--  -->
+            <!--    -->
         </rxui:RoutedViewHost>
-        <!--  -->
+        <!--    -->
     </StackPanel>
 </Window>

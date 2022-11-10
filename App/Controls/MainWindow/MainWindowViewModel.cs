@@ -4,6 +4,7 @@ using App.Controls.MenuItems;
 using App.Controls.Welcome;
 using System.Reactive;
 using System;
+using App.Controls.WorkPlace;
 
 
 
@@ -14,6 +15,8 @@ namespace App.Controls.MainWindow
         public RoutingState Router { get; }
         public WelcomeViewModel WelcomeViewModel { get; }
 
+        public WorkPlaceViewModel WorkPlaceViewModel { get; }
+
         public ReactiveCommand<Unit, IRoutableViewModel> GoToAbout { get; }
         public ReactiveCommand<Unit, IRoutableViewModel> GoToManual { get; }
 
@@ -23,7 +26,8 @@ namespace App.Controls.MainWindow
         public MainWindowViewModel()
         {
 
-            WelcomeViewModel = new WelcomeViewModel();
+             WelcomeViewModel = new WelcomeViewModel(this);
+            // WorkPlaceViewModel = new WorkPlaceViewModel();
 
             Router = new RoutingState();
 

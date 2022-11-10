@@ -1,12 +1,36 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:App.Controls.WorkPlace"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="App.Controls.WorkPlace.WorkPlaceView">
-
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.WorkPlace.WorkPlaceView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.WorkPlace"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.DataContext>
-        <vm:WorkPlaceViewModel/>
+        <vm:WorkPlaceViewModel />
     </Design.DataContext>
+    <Grid>
+        <StackPanel Margin="30,100,0,0">
+            <TextBlock Text="Binding GenName" />
+            <TextBlock Text="Binding N = " />
+        </StackPanel>
+        <StackPanel Margin="30,200,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Command="{Binding GenaerateNext}"
+                    Content="Сгенерировать новое число"
+                    Width="200" />
+                <TextBlock Text="Binding Last Num = " />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Command="{Binding Averga}"
+                    Content="Подсчитать среднее"
+                    Width="200" />
+                <TextBlock Text="Binding Last Averga = " />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </UserControl>

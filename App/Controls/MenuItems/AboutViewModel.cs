@@ -8,12 +8,13 @@ namespace App.Controls.MenuItems
         public string? UrlPathSegment { get; }
         public IScreen HostScreen { get; }
 
-        public ReactiveCommand<Unit, Unit> GoBack { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> GoBack { get; }
+        // public ReactiveCommand<Unit, Unit> GoBack { get; }
         public AboutViewModel(IScreen hostScreen)
         {
             HostScreen = hostScreen;
             GoBack = ReactiveCommand.CreateFromObservable
-                    (() => HostScreen.Router.NavigateBack.Execute(Unit.Default));
-        }
+                    (() => HostScreen.Router.Navigate.Execute(new WelcomeViewModel(HostScreen)));
+        } 
     }
 }
