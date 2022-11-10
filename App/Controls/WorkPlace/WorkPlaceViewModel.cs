@@ -1,3 +1,4 @@
+using Avalonia;
 using Generators;
 using ReactiveUI;
 
@@ -13,11 +14,11 @@ namespace App.Controls.WorkPlace
             CompositionGen = CompositionGenManager.Get();
         }
 
-        public object? UsedAverageBeahviour => CompositionGen.AverageBehavior switch
+        public object? UsedAverageBehaviour => CompositionGen.AverageBehavior switch
         {
-            AverageBehavior.ReturnAverageOfAvailableNumbers => App.Current.Resources["AverageBehavior.ReturnAverageOfAvailableNumbers"],
-            AverageBehavior.ThrowException => App.Current.Resources["AverageBehavior.ThrowException"],
-            AverageBehavior.ReturnNaN => App.Current.Resources["AverageBehavior.ReturnNaN"],
+            AverageBehavior.ReturnAverageOfAvailableNumbers => Application.Current?.Resources["AverageBehavior.ReturnAverageOfAvailableNumbers"],
+            AverageBehavior.ThrowException => Application.Current?.Resources["AverageBehavior.ThrowException"],
+            AverageBehavior.ReturnNaN => Application.Current?.Resources["AverageBehavior.ReturnNaN"],
         };
 
         public string? UrlPathSegment { get; } = "/WorkPlace";

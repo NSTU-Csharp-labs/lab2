@@ -7,6 +7,10 @@ namespace App.Controls.MainWindow;
 
 public class MainWindowViewModel : ReactiveObject, IScreen
 {
+    public ReactiveCommand<Unit, IRoutableViewModel> GoToWelcome { get; }
+    
+    public RoutingState Router { get; }
+    
     public MainWindowViewModel()
     {
         Router = new RoutingState();
@@ -15,8 +19,4 @@ public class MainWindowViewModel : ReactiveObject, IScreen
             () => Router.Navigate.Execute(new WelcomeViewModel(this))
         );
     }
-
-    public ReactiveCommand<Unit, IRoutableViewModel> GoToWelcome { get; }
-    
-    public RoutingState Router { get; }
 }

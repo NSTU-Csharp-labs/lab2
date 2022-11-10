@@ -11,13 +11,15 @@
     <Design.DataContext>
         <vm:WorkPlaceViewModel />
     </Design.DataContext>
-    <Grid>
-        <StackPanel Margin="30,100,0,0">
-            <TextBlock Text="{Binding CompositionGen.Name}" />
-            <TextBlock Text="{Binding CompositionGen.N, StringFormat=N\={0}} " />
-            <!-- <TextBlock -->
+    <Grid ColumnDefinitions="*,2*">
+        <StackPanel Grid.Column="0" Margin="20">
+            <TextBlock Margin="0 0 0 8" FontSize="24" LineHeight="32" TextWrapping="WrapWithOverflow" FontWeight="Bold" Text="Информация о композитном генераторе"/>
+            <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.Name, StringFormat=Имя: {0}}"/>
+            <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.N, StringFormat=Количество чисел\, необходимое для подсчета среднего арифметического: {0}}"/>
+            <TextBlock Margin="0" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour, StringFormat=Поведение подсчета среднего арифметичесого при недостатке числел: {0}}"/>
         </StackPanel>
-        <StackPanel Margin="30,200,0,0">
+        
+        <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
                 <Button
                     Command="{Binding GenaerateNext}"

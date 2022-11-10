@@ -7,31 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="fix devtools compile error">
-      <change afterPath="$PROJECT_DIR$/App/CompositionGenManager.cs" afterDir="false" />
+    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="update routing, update workplace">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/AboutViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/AboutViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/ManualViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/ManualViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/BaseGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/BaseGen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/CompositionGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/CompositionGen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generators/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/MenuItems/AboutViewModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -97,8 +79,16 @@
       <option name="presentableId" value="Default" />
       <updated>1668071297103</updated>
       <workItem from="1668071307993" duration="4987000" />
-      <workItem from="1668078536006" duration="1877000" />
+      <workItem from="1668078536006" duration="5177000" />
     </task>
+    <task id="LOCAL-00001" summary="update routing, update workplace">
+      <created>1668080479026</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668080479026</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +106,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update routing, update workplace" />
+    <option name="LAST_COMMIT_MESSAGE" value="update routing, update workplace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
