@@ -47,9 +47,7 @@ namespace App.Controls.WorkPlace
             HostScreen = hostScreen;
             CompositionGen = CompositionGenManager.Get();
 
-
-            AvailableGenerators =new ObservableCollection<GeneratorCardViewModel>(CompositionGen.Select(gen => new GeneratorCardViewModel(gen)));
-
+            AvailableGenerators = new ObservableCollection<GeneratorCardViewModel>(CompositionGen.Select(gen => new GeneratorCardViewModel(gen, DeleteGenerator)));
             
             ShowAdditionGen = new Interaction<AdditionGenViewModel, BaseGen?>();
             ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
@@ -65,6 +63,26 @@ namespace App.Controls.WorkPlace
             });
         }
 
+        private async Task DeleteGenerator(string name)
+        {
+            try
+            {
+                CompositionGen.DeleteGenByName(name);
+
+                for (var i = 0; i < AvailableGenerators.Count; i++)
+                {
+                    if (AvailableGenerators[i].Generator.Name == name)
+                    {
+                        AvailableGenerators.RemoveAt(i); 
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                await ShowErrorMessage.Handle(new ErrorMessageViewModel(e.Message));
+            }
+        } 
+        
         private async Task OnAddGenerator()
         {
             try
@@ -73,7 +91,7 @@ namespace App.Controls.WorkPlace
                 if (newGen != null)
                 {
                     CompositionGen.PushGen(newGen);
-                    AvailableGenerators.Add(new GeneratorCardViewModel(newGen));
+                    AvailableGenerators.Add(new GeneratorCardViewModel(newGen, DeleteGenerator));
                 }
             }
             catch (Exception e)

@@ -31,7 +31,7 @@ public partial class GeneratorCardView : ReactiveUserControl<GeneratorCardViewMo
         AvaloniaXamlLoader.Load(this);
     }
     
-    private static async Task DoShowInfo(InteractionContext<GenInfoViewModel, Unit> interactionContext)
+    private static async Task DoShowInfo(InteractionContext<GenInfoViewModel, bool> interactionContext)
     {
         var dialog = new GenInfoWindow
         {
@@ -39,8 +39,8 @@ public partial class GeneratorCardView : ReactiveUserControl<GeneratorCardViewMo
         };
             
         if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-            await dialog.ShowDialog(desktop.MainWindow); 
-            
-        interactionContext.SetOutput(Unit.Default);
+            interactionContext.SetOutput(await dialog.ShowDialog<bool>(desktop.MainWindow)); 
+        else
+            interactionContext.SetOutput(false);
     }
 }

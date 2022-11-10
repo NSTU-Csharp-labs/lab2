@@ -7,6 +7,7 @@ using App.Controls.ErrorMessage;
 using Generators;
 using ReactiveUI;
 using App.Controls.ErrorMessage;
+using Avalonia;
 
 namespace App.Controls.WorkPlace.GenInfo
 {
@@ -32,16 +33,20 @@ namespace App.Controls.WorkPlace.GenInfo
         public ReactiveCommand<Unit, Unit> GenerateNextNumber { get; }
         public BaseGen Gen { get; }
         public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
-
+        
+        public ReactiveCommand<Unit, Unit> Back { get; }
+        
+        public ReactiveCommand<Unit, Unit> Delete { get; }
 
         public GenInfoViewModel(BaseGen gen)
         {
             Gen = gen;
+            Back = ReactiveCommand.Create(() => Unit.Default);
+            Delete = ReactiveCommand.Create(() => Unit.Default);
             ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
             CalculateAverage = ReactiveCommand.CreateFromTask(OnCalculateAverage);
             GenerateNextNumber = ReactiveCommand.CreateFromTask(OnGenerateNextNumber);
         }
-        
         
         private async Task OnCalculateAverage()
         {
@@ -71,5 +76,12 @@ namespace App.Controls.WorkPlace.GenInfo
                 await ShowErrorMessage.Handle(new ErrorMessageViewModel(e.Message));
             }
         }
+        
+        public object? UsedAverageBehaviour => Gen.AverageBehavior switch
+        {
+            AverageBehavior.ReturnAverageOfAvailableNumbers => Application.Current?.Resources["AverageBehavior.ReturnAverageOfAvailableNumbers"],
+            AverageBehavior.ThrowException => Application.Current?.Resources["AverageBehavior.ThrowException"],
+            AverageBehavior.ReturnNaN => Application.Current?.Resources["AverageBehavior.ReturnNaN"],
+        };
     }
 }

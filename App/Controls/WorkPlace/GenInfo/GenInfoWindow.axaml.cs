@@ -19,6 +19,16 @@ namespace App.Controls.WorkPlace.GenInfo
             this.WhenActivated(d =>
             {
                 ViewModel!
+                    .Back
+                    .Subscribe(_ => Close(false))
+                    .DisposeWith(d);
+                
+                ViewModel!
+                    .Delete
+                    .Subscribe(_ => Close(true))
+                    .DisposeWith(d);
+                
+                ViewModel!
                     .ShowErrorMessage
                     .RegisterHandler(DoShowErrorMessage)
                     .DisposeWith(d);

@@ -15,8 +15,69 @@
         <vm:GenInfoViewModel />
     </Design.DataContext>
     <StackPanel>
+            <StackPanel>
+                <TextBlock
+                    FontSize="24"
+                    FontWeight="Bold"
+                    LineHeight="32"
+                    Margin="0,0,0,12"
+                    Text="Информация о композитном генераторе"
+                    TextWrapping="WrapWithOverflow" />
+
+                <WrapPanel
+                    Margin="0,0,0,8"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNamePropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Text="{Binding Gen.Name}"
+                        TextWrapping="WrapWithOverflow" />
+                </WrapPanel>
+
+                <WrapPanel
+                    Margin="0,0,0,12"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Text="{Binding Gen.N}"
+                        TextWrapping="WrapWithOverflow" />
+                </WrapPanel>
+
+                <WrapPanel
+                    Margin="0,0,0,12"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorAverageBehaviorPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        LineHeight="24"
+                        Margin="0,0,0,0"
+                        Text="{Binding UsedAverageBehaviour}"
+                        TextWrapping="WrapWithOverflow" />
+                </WrapPanel>
+            </StackPanel>
+        
         <StackPanel
-            Grid.Row="2"
             Margin="0,20"
             Orientation="Vertical">
             <Button Command="{Binding GenerateNextNumber}" Content="Сгенерировать следующее число" />
@@ -33,6 +94,11 @@
                 Margin="0,0,0,4"
                 Text="{Binding LastCalculatedAverage, StringFormat=Последнее подсчитаное среднее арифметическое: {0}}"
                 TextWrapping="WrapWithOverflow" />
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding Back}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Назад"/>
+            <Button Command="{Binding Delete}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Удалить"/>
         </StackPanel>
     </StackPanel>
 </Window>

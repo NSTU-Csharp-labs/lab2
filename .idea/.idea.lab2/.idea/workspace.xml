@@ -7,11 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="refactor">
+    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="хочу кушац дайте поесть">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GenInfo/GenInfoWindow.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/GeneratorCard/GeneratorCardViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e48c385a0f8c4d27705158a41832ed686216b07b40ba171e89b41411bcc4dc/RxApp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/danilka108/RiderProjects/lab2/App/Controls/WorkPlace/GeneratorCard/GeneratorCardView.axaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668115424687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="хочу кушац дайте поесть">
+      <created>1668121971376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668121971376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +154,8 @@
     <MESSAGE value="Add opening addition gen dialog" />
     <MESSAGE value="refactor opening addition gen dialog" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="хочу кушац дайте поесть" />
+    <option name="LAST_COMMIT_MESSAGE" value="хочу кушац дайте поесть" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
