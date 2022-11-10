@@ -1,6 +1,9 @@
 using Avalonia.ReactiveUI;
+using System;
+using System.Reactive.Disposables;
 using Avalonia.Markup.Xaml;
 using Avalonia;
+using ReactiveUI;
 
 namespace App.Controls.WorkPlace.AdditionGen
 {
@@ -8,6 +11,11 @@ namespace App.Controls.WorkPlace.AdditionGen
     {
         public AdditionGenWindow()
         {
+            this.WhenActivated(d =>
+            {
+                ViewModel!.AddRandomGenViewModel.CreateRandomGen.Subscribe(Close).DisposeWith(d);
+                ViewModel!.AddConstStepGenViewModel.CreateConstStepGen.Subscribe(Close).DisposeWith(d);
+            });
             InitializeComponent();
         }
 
