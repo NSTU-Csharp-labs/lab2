@@ -1,5 +1,6 @@
 using System.Reactive;
 using System.Threading.Tasks;
+using App.Controls.ErrorMessage;
 using App.Controls.MainWindow;
 using App.Controls.WorkPlace.AdditionGen;
 using Avalonia;
@@ -21,11 +22,37 @@ namespace App.Controls.WorkPlace
                     .ShowAdditionGen
                     .RegisterHandler(DoShowAdditionGen)
                     .DisposeWith(d);
+
+                ViewModel!
+                    .ShowErrorMessage
+                    .RegisterHandler(DoShowErrorMessage)
+                    .DisposeWith(d);
             });
+            
             InitializeComponent();
         }
 
-        private async Task DoShowAdditionGen(InteractionContext<AdditionGenViewModel, Unit> interactionContext)
+        private void InitializeComponent()
+        {
+            AvaloniaXamlLoader.Load(this);
+        }
+
+        private static async Task DoShowErrorMessage(InteractionContext<ErrorMessageViewModel, Unit> interactionContext)
+        {
+            var dialog = new ErrorMessageWindow
+            {
+                DataContext = interactionContext.Input,
+            };
+            
+            if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            {
+                await dialog.ShowDialog(desktop.MainWindow);
+            }
+            
+            interactionContext.SetOutput(Unit.Default);
+        }
+
+        private static async Task DoShowAdditionGen(InteractionContext<AdditionGenViewModel, Unit> interactionContext)
         {
             var dialog = new AdditionGenWindow
             {
@@ -39,11 +66,5 @@ namespace App.Controls.WorkPlace
             
             interactionContext.SetOutput(Unit.Default);
         }
-
-        public void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
-
     }
 }

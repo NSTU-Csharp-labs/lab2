@@ -1,0 +1,12 @@
+/home/danilka108/RiderProjects/lab2/Generators/bin/Debug/net6.0/Generators.deps.json
+/home/danilka108/RiderProjects/lab2/Generators/bin/Debug/net6.0/Generators.dll
+/home/danilka108/RiderProjects/lab2/Generators/bin/Debug/net6.0/ref/Generators.dll
+/home/danilka108/RiderProjects/lab2/Generators/bin/Debug/net6.0/Generators.pdb
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.csproj.AssemblyReference.cache
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.GeneratedMSBuildEditorConfig.editorconfig
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.AssemblyInfoInputs.cache
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.AssemblyInfo.cs
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.csproj.CoreCompileInputs.cache
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.dll
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/ref/Generators.dll
+/home/danilka108/RiderProjects/lab2/Generators/obj/Debug/net6.0/Generators.pdb

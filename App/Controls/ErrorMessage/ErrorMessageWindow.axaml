@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:errorMessage="clr-namespace:App.Controls.ErrorMessage"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        SizeToContent="WidthAndHeight"
+        CanResize="False"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        x:Class="App.Controls.ErrorMessage.ErrorMessageWindow"
+        Title="ErrorMessageWindow">
+        
+        <Design.DataContext>
+                <errorMessage:ErrorMessageViewModel/>
+        </Design.DataContext> 
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+                <TextBlock Margin="16 8 16 8" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Text="{Binding Message}"/>
+                <Button Margin="0 0 0 4" HorizontalAlignment="Center" Command="{Binding Close}" Content="Ok"/>
+        </StackPanel>
+</Window>

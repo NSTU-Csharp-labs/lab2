@@ -1,7 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using App.Controls.ErrorMessage;
 using App.Controls.WorkPlace.AdditionGen;
+using App.Controls.WorkPlace.GeneratorCard;
 using Avalonia;
 using Generators;
 using ReactiveUI;
@@ -12,22 +18,87 @@ namespace App.Controls.WorkPlace
     {
         public CompositionGen CompositionGen { get; }
         public ReactiveCommand<Unit, Unit> AddGenerator { get; }
-            
+        
+        public ReactiveCommand<Unit, Unit> GenerateNextNumber { get; }
+        
+        public ReactiveCommand<string, Unit> ShowGeneratorInfo { get; }
 
+        private string _lastGeneratedNumber;
+        
+        public string LastGeneratedNumber
+        {
+            get => _lastGeneratedNumber;
+            set => this.RaiseAndSetIfChanged(ref _lastGeneratedNumber, value);
+        }
+
+        private string _lastCalculatedAverage;
+
+        public string LastCalculatedAverage
+        {
+            get => _lastCalculatedAverage;
+            set => this.RaiseAndSetIfChanged(ref _lastCalculatedAverage, value);
+        }
+        
+        public ReactiveCommand<Unit, Unit> CalculateAverage { get; }
+        
         public WorkPlaceViewModel(IScreen hostScreen)
         {
             HostScreen = hostScreen;
             CompositionGen = CompositionGenManager.Get();
 
-            ShowAdditionGen = new Interaction<AdditionGenViewModel, Unit>();
+            AvailableGenerators = CompositionGen.Select(gen => new GeneratorCardViewModel(gen));
             
-            AddGenerator = ReactiveCommand.CreateFromTask(async () =>
+            ShowAdditionGen = new Interaction<AdditionGenViewModel, Unit>();
+            ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
+
+            CalculateAverage = ReactiveCommand.CreateFromTask(OnCalculateAverage);
+            AddGenerator = ReactiveCommand.CreateFromTask(OnAddGenerator);
+            GenerateNextNumber = ReactiveCommand.CreateFromTask(OnGenerateNextNumber);
+            
+            ShowGeneratorInfo = ReactiveCommand.CreateFromTask(async (string a) =>
             {
-                await ShowAdditionGen.Handle(new AdditionGenViewModel());
+                
             });
+
         }
 
-        public Interaction<AdditionGenViewModel, Unit> ShowAdditionGen;
+        private async Task OnAddGenerator()
+        {
+            await ShowAdditionGen.Handle(new AdditionGenViewModel());
+        }
+
+        private async Task OnCalculateAverage()
+        {
+            try
+            {
+                LastCalculatedAverage = Convert.ToString(
+                    CompositionGen.CalculateAverage(),
+                    CultureInfo.InvariantCulture
+                );
+            }
+            catch (Exception e)
+            {
+                await ShowErrorMessage.Handle(new ErrorMessageViewModel(e.Message));
+            }
+        }
+
+        private async Task OnGenerateNextNumber()
+        {
+            try
+            {
+                LastGeneratedNumber = Convert.ToString(
+                    CompositionGen.GenerateNextNumber(),
+                    CultureInfo.InvariantCulture);
+            }
+            catch (Exception e)
+            {
+                await ShowErrorMessage.Handle(new ErrorMessageViewModel(e.Message));
+            }
+        }
+
+        public Interaction<AdditionGenViewModel, Unit> ShowAdditionGen { get; }
+        
+        public Interaction<ErrorMessageViewModel, Unit> ShowErrorMessage { get; }
 
         public object? UsedAverageBehaviour => CompositionGen.AverageBehavior switch
         {
@@ -38,5 +109,13 @@ namespace App.Controls.WorkPlace
 
         public string? UrlPathSegment { get; } = "/WorkPlace";
         public IScreen HostScreen { get; }
+        
+        private IEnumerable<GeneratorCardViewModel> _availableGenerators;
+
+        public IEnumerable<GeneratorCardViewModel> AvailableGenerators
+        {
+            get => _availableGenerators;
+            set => this.RaiseAndSetIfChanged(ref _availableGenerators, value);
+        }
     }
 }

@@ -1,16 +1,17 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Generators;
 
-public class CompositionGen : BaseGen
+public class CompositionGen : BaseGen, IEnumerable<BaseGen>
 {
     private readonly List<BaseGen> _generators = new List<BaseGen>();
 
     public CompositionGen(string? name, int n, AverageBehavior averageBehavior) : base(name, n, averageBehavior) { }
 
-    public List<BaseGen>.Enumerator GetEnumerator() => _generators.GetEnumerator();
+    // public List<BaseGen>.Enumerator GetEnumerator() => _generators.GetEnumerator();
 
     public override double GenerateNextNumber()
     {
@@ -56,4 +57,13 @@ public class CompositionGen : BaseGen
     }
 
     private bool IndexValidate(int index) => (index < 0 || index > _generators.Count || !_generators.Any());
+    public IEnumerator<BaseGen> GetEnumerator()
+    {
+        return _generators.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
 }

@@ -1,40 +1,65 @@
-<UserControl
-    d:DesignHeight="450"
-    d:DesignWidth="800"
-    mc:Ignorable="d"
-    x:Class="App.Controls.WorkPlace.WorkPlaceView"
-    xmlns="https://github.com/avaloniaui"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:App.Controls.WorkPlace"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:App.Controls.WorkPlace"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:generatorCard="clr-namespace:App.Controls.WorkPlace.GeneratorCard"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d"
+             x:Class="App.Controls.WorkPlace.WorkPlaceView">
+    
     <Design.DataContext>
         <vm:WorkPlaceViewModel />
     </Design.DataContext>
+
     <Grid ColumnDefinitions="*,2*">
-        <StackPanel Grid.Column="0" Margin="20">
-            <TextBlock Margin="0 0 0 8" FontSize="24" LineHeight="32" TextWrapping="WrapWithOverflow" FontWeight="Bold" Text="Информация о композитном генераторе"/>
-            <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.Name, StringFormat=Имя: {0}}"/>
-            <TextBlock Margin="0 0 0 4" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.N, StringFormat=Количество чисел\, необходимое для подсчета среднего арифметического: {0}}"/>
-            <TextBlock Margin="0" FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour, StringFormat=Поведение подсчета среднего арифметичесого при недостатке числел: {0}}"/>
-            <Button Content="Добавить генератор" Command="{Binding AddGenerator}"/>
-        </StackPanel>
-        
+        <DockPanel Grid.Column="0" Margin="20">
+            <StackPanel DockPanel.Dock="Top">
+                <TextBlock Margin="0 0 0 8" FontSize="24" LineHeight="32" TextWrapping="WrapWithOverflow"
+                           FontWeight="Bold" Text="Информация о композитном генераторе" />
+
+                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow" Text="Имя:" />
+                <TextBlock Margin="5 0 0 4" FontSize="18" LineHeight="24" FontWeight="Bold"
+                           TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.Name}" />
+
+                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
+                           Text="Количество чисел, необходимое для подсчета среднего арифметического:" />
+                <TextBlock Margin="5 0 0 4" FontSize="18" LineHeight="24" FontWeight="Bold"
+                           TextWrapping="WrapWithOverflow" Text="{Binding CompositionGen.N}" />
+
+                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
+                           Text="Поведение подсчета среднего арифметичесого при недостатке числел:" />
+                <TextBlock Margin="5 0 0 0" FontSize="18" LineHeight="24" FontWeight="Bold"
+                           TextWrapping="WrapWithOverflow" Text="{Binding UsedAverageBehaviour}" />
+            </StackPanel>
+
+            <!-- <Button DockPanel.Dock="Bottom" Content="Добавить генератор" Command="{Binding AddGenerator}" /> -->
+
+            <StackPanel DockPanel.Dock="Bottom">
+
+                <Button
+                    Content="Сгенерировать следующее число"
+                    Command="{Binding GenerateNextNumber}" />
+                <TextBlock
+                    Text="{Binding LastGeneratedNumber, StringFormat=Последнее сгенерированное число: {0}}" />
+                <Button
+                    Content="Подсчитать следнее"
+                    Command="{Binding CalculateAverage}" />
+                <TextBlock
+                    Text="{Binding LastCalculatedAverage, StringFormat=Последнее подсчитаное среднее арифметическое: {0}}" />
+            </StackPanel>
+        </DockPanel>
+
         <StackPanel Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <Button
-                    Command="{Binding GenaerateNext}"
-                    Content="Сгенерировать новое число"
-                    Width="200" />
-                <TextBlock Text="Binding Last Num = " />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button
-                    Command="{Binding Averga}"
-                    Content="Подсчитать среднее"
-                    Width="200" />
-                <TextBlock Text="Binding Last Averga = " />
-            </StackPanel>
+            <TextBlock Text="Добавленные генератора" />
+            <ItemsControl Items="{Binding AvailableGenerators}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <generatorCard:GeneratorCardView DataContext="{Binding}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
     </Grid>
 </UserControl>
