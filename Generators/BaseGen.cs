@@ -6,16 +6,20 @@ namespace Generators;
 
 public abstract class BaseGen
 {
-    private readonly int _n;
-    protected AverageBehavior _averageBehavior;
     protected readonly List<double> Numbers;
 
-    public BaseGen(string name, int n, AverageBehavior averageBehavior)
+    public AverageBehavior AverageBehavior { get; }
+
+    public int N { get; }
+
+    public BaseGen(string? name, int n, AverageBehavior averageBehavior)
     {
+        if (name == null) throw new ArgumentNullException(nameof(name));
+        
         Name = new string(name);
         Numbers = new List<double>();
-        _averageBehavior = averageBehavior;
-        _n = n;
+        AverageBehavior = averageBehavior;
+        N = n;
     }
 
     public string Name { get; }
@@ -43,16 +47,16 @@ public abstract class BaseGen
     {
         double res = 0;
 
-        if (Numbers.Count >= _n)
-            res = Numbers.TakeLast(_n).Sum() / _n;
+        if (Numbers.Count >= N)
+            res = Numbers.TakeLast(N).Sum() / N;
         else
         {
-            switch (_averageBehavior)
+            switch (AverageBehavior)
             {
                 case AverageBehavior.ThrowException:
                     throw new InvalidOperationException("Количество чисел должно быть хотя бы N");
                 case AverageBehavior.ReturnAverageOfAvailableNumbers:
-                    res = Numbers.Sum() / _n;
+                    res = Numbers.Sum() / N;
                     break;
                 case AverageBehavior.ReturnNaN:
                     res = double.NaN;

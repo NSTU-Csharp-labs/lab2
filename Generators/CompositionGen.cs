@@ -8,7 +8,7 @@ public class CompositionGen : BaseGen
 {
     private readonly List<BaseGen> _generators = new List<BaseGen>();
 
-    public CompositionGen(string name, int n, AverageBehavior averageBehavior) : base(name, n, averageBehavior) { }
+    public CompositionGen(string? name, int n, AverageBehavior averageBehavior) : base(name, n, averageBehavior) { }
 
     public List<BaseGen>.Enumerator GetEnumerator() => _generators.GetEnumerator();
 

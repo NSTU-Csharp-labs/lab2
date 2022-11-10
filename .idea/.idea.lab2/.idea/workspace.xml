@@ -7,15 +7,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="">
+    <list default="true" id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="fix devtools compile error">
+      <change afterPath="$PROJECT_DIR$/App/CompositionGenManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/AboutView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/AboutView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/ManualView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/ManualView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MainWindow/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/AboutViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/AboutViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/MenuItems/ManualViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/MenuItems/ManualViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/Welcome/WelcomeViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controls/WorkPlace/WorkPlaceViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/BaseGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/BaseGen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/CompositionGen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/CompositionGen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Debug/net6.0/Generators.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/Generators.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generators/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generators/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Generators/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +46,28 @@
     <setting file="file://$PROJECT_DIR$/App/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App/ViewLocator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HLiFQjuxVQuMa0Ex8zcIrohJAA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -58,8 +88,21 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8150546f-781c-40af-9387-888c62212a1c" name="Changes" comment="fix devtools compile error" />
+      <created>1668071297103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668071297103</updated>
+      <workItem from="1668071307993" duration="4987000" />
+      <workItem from="1668078536006" duration="1877000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
@@ -73,5 +116,28 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Generators/BaseGen.cs</url>
+          <line>18</line>
+          <properties documentPath="$PROJECT_DIR$/Generators/BaseGen.cs" initialLine="14" containingFunctionPresentation="constructor 'BaseGen'">
+            <startOffsets>
+              <option value="425" />
+            </startOffsets>
+            <endOffsets>
+              <option value="449" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

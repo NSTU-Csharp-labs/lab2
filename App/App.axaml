@@ -14,6 +14,9 @@
             <system:String x:Key="AboutContent">Здесь текст какие мы крутые</system:String>
             <system:String x:Key="WelcomeContent">Здесь текст о том что надо принициализировать компоизитный генератор</system:String>
             <system:String x:Key="ManualContent">Здесь текст как эта херь вся работает</system:String>
+            <system:String x:Key="AverageBehavior.ReturnAverageOfAvailableNumbers">Возврат среднего арифметического от всех имеющихся чисел</system:String>
+            <system:String x:Key="AverageBehavior.ThrowException">Выкидывание исключения</system:String>
+            <system:String x:Key="AverageBehavior.ReturnNaN">Возврат NaN</system:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

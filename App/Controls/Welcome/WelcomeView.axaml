@@ -12,13 +12,17 @@
     </Design.DataContext>
     <!-- <TextBlock Text="asdasdasd" /> -->
     <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Command="{Binding GoToManual}" Header="Мануал по использованию" />
+            <MenuItem Command="{Binding GoToAbout}" Header="О разработчиках" />
+        </Menu>
         <StackPanel
             HorizontalAlignment="Left"
             Margin="30,120,0,0"
             Width="400">
             <TextBlock Text="{StaticResource WelcomeContent}" />
             <TextBox Text="{Binding CompName, Mode=TwoWay}" Watermark="Введите имя генератора" />
-            <ComboBox Width="400" x:Name="BehaviourComboBox">
+            <ComboBox Width="400" x:Name="BehaviourComboBox" SelectedIndex="{Binding SelectedAverageBehaviorIndex}">
                 <ComboBoxItem>ReturnAverageOfAvailableNumbers</ComboBoxItem>
                 <ComboBoxItem>ThrowException</ComboBoxItem>
                 <ComboBoxItem>ReturnNaN</ComboBoxItem>
@@ -26,7 +30,7 @@
             <TextBox Text="{Binding N, Mode=TwoWay}" Watermark="Введите число N" />
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Margin="0,120,100,0">
-            <Button Command="{Binding CreateGen}" Content="Создать генератор" />
+            <Button HorizontalAlignment="Right" Command="{Binding CreateGen}" Content="Создать генератор" />
             <TextBlock
                 Foreground="Red"
                 IsVisible="{Binding IsDataInvalid}"

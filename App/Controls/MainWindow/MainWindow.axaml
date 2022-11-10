@@ -11,32 +11,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
     xmlns:vm="using:App.Controls.MainWindow"
-    xmlns:welcome="clr-namespace:App.Controls.Welcome"
-    xmlns:workplace="clr-namespace:App.Controls.WorkPlace"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!--    -->
+    
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
+    
     <StackPanel>
-        <Menu VerticalAlignment="Top">
-            <MenuItem Command="{Binding GoToManual}" Header="Мануал по использованию" />
-            <MenuItem Command="{Binding GoToAbout}" Header="О разработчиках" />
-        </Menu>
-        <!--    -->
         <rxui:RoutedViewHost PageTransition="{x:Null}" Router="{Binding Router}">
-            <rxui:RoutedViewHost.DefaultContent>
-                <welcome:WelcomeView DataContext="{Binding WelcomeViewModel}" />
-            </rxui:RoutedViewHost.DefaultContent>
-            <!-- <rxui:RoutedViewHost.DefaultContent> -->
-            <!--     <workplace:WorkPlaceView DataContext="{Binding WorkPlaceViewModel}" /> -->
-            <!-- </rxui:RoutedViewHost.DefaultContent> -->
-            <!--    -->
             <rxui:RoutedViewHost.ViewLocator>
                 <locator:RoutedViewLocator />
             </rxui:RoutedViewHost.ViewLocator>
-            <!--    -->
         </rxui:RoutedViewHost>
-        <!--    -->
     </StackPanel>
 </Window>
