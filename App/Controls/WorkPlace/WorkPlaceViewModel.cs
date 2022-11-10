@@ -47,9 +47,9 @@ namespace App.Controls.WorkPlace
             HostScreen = hostScreen;
             CompositionGen = CompositionGenManager.Get();
 
-            AvailableGenerators = new ObservableCollection<GeneratorCardViewModel>(
-                CompositionGen.Select(gen => new GeneratorCardViewModel(gen))
-                );
+
+            AvailableGenerators =new ObservableCollection<GeneratorCardViewModel>(CompositionGen.Select(gen => new GeneratorCardViewModel(gen)));
+
             
             ShowAdditionGen = new Interaction<AdditionGenViewModel, BaseGen?>();
             ShowErrorMessage = new Interaction<ErrorMessageViewModel, Unit>();
@@ -125,7 +125,6 @@ namespace App.Controls.WorkPlace
         public string? UrlPathSegment { get; } = "/WorkPlace";
         public IScreen HostScreen { get; }
         
-
         public ObservableCollection<GeneratorCardViewModel> AvailableGenerators { get; }
     }
 }
