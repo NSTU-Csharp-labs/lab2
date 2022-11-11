@@ -1,17 +1,29 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="using:App.Controls.MenuItems"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="App.Controls.MenuItems.ManualView">
+<UserControl
+    mc:Ignorable="d"
+    x:Class="App.Controls.MenuItems.ManualView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:App.Controls.MenuItems"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.DataContext>
         <vm:ManualViewModel />
     </Design.DataContext>
-    <StackPanel HorizontalAlignment="Center"
-                Margin="50">
-        <TextBlock Text="{StaticResource ManualContent}" />
-        <Button Command="{Binding GoBack}"
-                Content="Назад" />
-    </StackPanel>
+    <Grid>
+        <TextBlock
+            FontSize="18"
+            HorizontalAlignment="Left"
+            Margin="20,0,0,0"
+            Text="{StaticResource ManualContent1}" />
+        <StackPanel HorizontalAlignment="Right" Margin="0,0,20,0">
+            <TextBlock
+                FontSize="18"
+                HorizontalAlignment="Right"
+                Text="{StaticResource ManualContent2}" />
+            <Button
+                Command="{Binding GoBack}"
+                Content="Назад"
+                FontSize="16" />
+        </StackPanel>
+    </Grid>
 </UserControl>

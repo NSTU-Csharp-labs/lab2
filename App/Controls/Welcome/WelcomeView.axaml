@@ -10,47 +10,93 @@
     <Design.DataContext>
         <welcome:WelcomeViewModel />
     </Design.DataContext>
-    <StackPanel Orientation="Vertical">
-        <Menu VerticalAlignment="Top">
-            <MenuItem Command="{Binding GoToManual}" Header="Мануал по использованию" />
-            <MenuItem Command="{Binding GoToAbout}" Header="О разработчиках" />
-        </Menu>
-        
-        <StackPanel HorizontalAlignment="Left" Margin="30,120,0,0" Width="400">
-            <TextBlock Margin="0 0 0 12" Text="{StaticResource WelcomeContent}" />
-
-            <Label Target="{Binding ElementName=Name}">
-                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
-                           Text="{StaticResource GeneratorNamePropertyDescription}" />
-            </Label>
-            <TextBox FontSize="18" Margin="0 0 0 8" x:Name="Name" Text="{Binding CompName, Mode=TwoWay}" />
-
-            <Label Target="{Binding ElementName=N}">
-                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
-                           Text="{StaticResource GeneratorNPropertyDescription}" />
-            </Label>
-            <TextBox FontSize="18" Margin="0 0 0 8" x:Name="N" Text="{Binding N, Mode=TwoWay}" />
-
-            <Label Target="{Binding ElementName=AverageBehavior}">
-                <TextBlock FontSize="18" LineHeight="24" TextWrapping="WrapWithOverflow"
-                           Text="{StaticResource GeneratorAverageBehaviorPropertyDescription}" />
-            </Label>
-            <ComboBox Margin="0 0 0 12" x:Name="AverageBehavior" Width="400"
-                      SelectedIndex="{Binding SelectedAverageBehaviorIndex}">
-                <ComboBoxItem>
-                    <TextBlock TextAlignment="Left" FontSize="18" LineHeight="24" Text="{StaticResource AverageBehavior.ReturnAverageOfAvailableNumbers}" />
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock TextAlignment="Left" FontSize="18" LineHeight="24" Text="{StaticResource AverageBehavior.ThrowException}" />
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock TextAlignment="Left" FontSize="18" LineHeight="24" Text="{StaticResource AverageBehavior.ReturnNaN}" />
-                </ComboBoxItem>
-            </ComboBox>
-            
-            <Button HorizontalAlignment="Left" Command="{Binding CreateGen}">
-                <TextBlock FontSize="18" LineHeight="24" Text="Создать генератора"/>
-            </Button>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Menu VerticalAlignment="Top">
+                <MenuItem Command="{Binding GoToManual}" Header="Мануал по использованию" />
+                <MenuItem Command="{Binding GoToAbout}" Header="О разработчиках" />
+            </Menu>
         </StackPanel>
-    </StackPanel>
+        <Grid>
+            <Button
+                Command="{Binding}"
+                Content="{StaticResource WelcomeContent}"
+                FontSize="18"
+                HorizontalAlignment="Left"
+                Margin="30,50,0,0" />
+
+            <StackPanel
+                HorizontalAlignment="Right"
+                Margin="0,50,40,0"
+                Width="400">
+                <Label Target="{Binding ElementName=Name}">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNamePropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                </Label>
+                <TextBox
+                    FontSize="18"
+                    Margin="0,0,0,8"
+                    Text="{Binding CompName, Mode=TwoWay}"
+                    x:Name="Name" />
+
+                <Label Target="{Binding ElementName=N}">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorNPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                </Label>
+                <TextBox
+                    FontSize="18"
+                    Margin="0,0,0,8"
+                    Text="{Binding N, Mode=TwoWay}"
+                    x:Name="N" />
+
+                <Label Target="{Binding ElementName=AverageBehavior}">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="{StaticResource GeneratorAverageBehaviorPropertyDescription}"
+                        TextWrapping="WrapWithOverflow" />
+                </Label>
+                <ComboBox
+                    Margin="0,0,0,12"
+                    SelectedIndex="{Binding SelectedAverageBehaviorIndex}"
+                    Width="400"
+                    x:Name="AverageBehavior">
+                    <ComboBoxItem>
+                        <TextBlock
+                            FontSize="18"
+                            LineHeight="24"
+                            Text="{StaticResource AverageBehavior.ReturnAverageOfAvailableNumbers}"
+                            TextAlignment="Left" />
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <TextBlock
+                            FontSize="18"
+                            LineHeight="24"
+                            Text="{StaticResource AverageBehavior.ThrowException}"
+                            TextAlignment="Left" />
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <TextBlock
+                            FontSize="18"
+                            LineHeight="24"
+                            Text="{StaticResource AverageBehavior.ReturnNaN}"
+                            TextAlignment="Left" />
+                    </ComboBoxItem>
+                </ComboBox>
+
+                <Button Command="{Binding CreateGen}" HorizontalAlignment="Left">
+                    <TextBlock
+                        FontSize="18"
+                        LineHeight="24"
+                        Text="Создать генератора" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
 </UserControl>

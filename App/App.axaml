@@ -1,8 +1,9 @@
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:App"
-             xmlns:system="clr-namespace:System;assembly=mscorlib"
-             x:Class="App.App">
+<Application
+    x:Class="App.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:local="using:App"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
@@ -11,16 +12,20 @@
     </Application.Styles>
     <Application.Resources>
         <ResourceDictionary>
-            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического: </system:String>
-            <system:String x:Key="GeneratorNamePropertyDescription">Имя: </system:String>
-            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел: </system:String>
-            
-            <system:String x:Key="AboutContent">Здесь текст какие мы крутые</system:String>
-            
-            <system:String x:Key="WelcomeContent">Здесь текст о том что надо принициализировать компоизитный генератор</system:String>
-            
-            <system:String x:Key="ManualContent">Здесь текст как эта херь вся работает</system:String>
-            
+            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического:</system:String>
+            <system:String x:Key="GeneratorNamePropertyDescription">Имя:</system:String>
+            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел:</system:String>
+
+            <system:String x:Key="AboutContent">Хромин Сережа и Данил Чуриков начали делать это во втроник примерно в 19 часов вечера&#10;&#13;Сейчас 7:38 утра пятницы Сережа пишет этот текст</system:String>
+
+            <system:String x:Key="WelcomeContent">Для корректной работы программы&#10;&#13;необходимо инициализировать&#10;&#13; композитный генератор&#10;&#13;Подробнее в пункте меню 'Мануал'</system:String>
+            <system:String x:Key="ManualContent1">
+                Вас приветсвует программа по генерированию случайных чисел!&#10;&#13;Доступны 3 вида генераторов чисел:&#10;&#13;Генератор с постоянным шагом&#10;&#13;Генератор псевдослучайных чисел&#10;&#13;Композитный генератор&#10;&#13;В программе вся работа происходит в композитном&#10;&#13;генераторе: в него добавляются другие типы генераторов&#10;&#13;
+            </system:String>
+            <system:String x:Key="ManualContent2">
+                У каждого генератора есть:&#10;&#13;Имя&#10;&#13;Константа N, от которой зависит подсчет среднего значения:&#10;&#13;Подсчет среднего относительно имеющихся чисел&#10;&#13;Возвращение ошибки&#10;&#13;Возвращение NotANumber&#10;&#13;
+            </system:String>
+
             <system:String x:Key="AverageBehavior.ReturnAverageOfAvailableNumbers">Возврат среднего арифметического от всех имеющихся чисел</system:String>
             <system:String x:Key="AverageBehavior.ThrowException">Выкидывание исключения</system:String>
             <system:String x:Key="AverageBehavior.ReturnNaN">Возврат NaN</system:String>
