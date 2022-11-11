@@ -90,11 +90,12 @@
                     </ComboBoxItem>
                 </ComboBox>
 
-                <Button Command="{Binding CreateGen}" HorizontalAlignment="Left">
+                <Button Command="{Binding CreateGen}" HorizontalAlignment="Center">
                     <TextBlock
                         FontSize="18"
                         LineHeight="24"
-                        Text="Создать генератора" />
+                        Text="Создать генератор"
+                        VerticalAlignment="Center" />
                 </Button>
             </StackPanel>
         </Grid>

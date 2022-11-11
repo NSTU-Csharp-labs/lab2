@@ -12,11 +12,11 @@
     </Application.Styles>
     <Application.Resources>
         <ResourceDictionary>
-            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического:</system:String>
+            <system:String x:Key="GeneratorNPropertyDescription">Количество чисел, необходимое для подсчета среднего арифметического:&#160;</system:String>
             <system:String x:Key="GeneratorNamePropertyDescription">Имя:</system:String>
-            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел:</system:String>
+            <system:String x:Key="GeneratorAverageBehaviorPropertyDescription">Поведение подсчета среднего арифметичесого при недостатке числел:&#160;</system:String>
 
-            <system:String x:Key="AboutContent">Хромин Сережа и Данил Чуриков начали делать это во втроник примерно в 19 часов вечера&#10;&#13;Сейчас 7:38 утра пятницы Сережа пишет этот текст</system:String>
+            <system:String x:Key="AboutContent">Хромин Сережа и Данил Чуриков начали делать это во втроник примерно в 19 часов вечера&#10;&#13;Сейчас 7:38 утра пятницы Сережа пишет этот текст&#10;&#13;Prod by AvaloniaUI</system:String>
 
             <system:String x:Key="WelcomeContent">Для корректной работы программы&#10;&#13;необходимо инициализировать&#10;&#13; композитный генератор&#10;&#13;Подробнее в пункте меню 'Мануал'</system:String>
             <system:String x:Key="ManualContent1">

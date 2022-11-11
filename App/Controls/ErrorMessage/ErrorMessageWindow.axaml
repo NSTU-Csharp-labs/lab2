@@ -1,22 +1,37 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:errorMessage="clr-namespace:App.Controls.ErrorMessage"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        SizeToContent="WidthAndHeight"
-        CanResize="False"
+<Window
+    CanResize="False"
+    HorizontalAlignment="Center"
+    Icon="../../Assets/generator-logo.ico"
+    SizeToContent="WidthAndHeight"
+    Title="NumGens - Error"
+    VerticalAlignment="Center"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="App.Controls.ErrorMessage.ErrorMessageWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:errorMessage="clr-namespace:App.Controls.ErrorMessage"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.DataContext>
+        <errorMessage:ErrorMessageViewModel />
+    </Design.DataContext>
+
+    <StackPanel
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        x:Class="App.Controls.ErrorMessage.ErrorMessageWindow"
-        Title="ErrorMessageWindow">
-        
-        <Design.DataContext>
-                <errorMessage:ErrorMessageViewModel/>
-        </Design.DataContext> 
-        
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
-                <TextBlock Margin="16 8 16 8" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Text="{Binding Message}"/>
-                <Button Margin="0 0 0 4" HorizontalAlignment="Center" Command="{Binding Close}" Content="Ok"/>
-        </StackPanel>
+        Orientation="Vertical"
+        VerticalAlignment="Center">
+        <TextBlock
+            HorizontalAlignment="Center"
+            Margin="16,8,16,8"
+            Text="{Binding Message}"
+            TextWrapping="WrapWithOverflow" />
+        <Button
+            Command="{Binding Close}"
+            Content="Ok"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,4" />
+    </StackPanel>
 </Window>
